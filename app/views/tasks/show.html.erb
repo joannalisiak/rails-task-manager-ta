@@ -3,12 +3,14 @@
   <div class="background-gray">
     <p> <%= @task.details %> </p>
   </div>
-  <div class="border-gray">
+  <div class="border-gray margin-top">
     <% if @task.completed %>
       <p> <%= @task.completed %> This task is completed</p>
     <% else %>
       <p> <%= @task.completed %> This task is not completed yet</p>
     <% end %>
   </div>
-  <%= link_to "Back to list", tasks_path %>
+  <%= link_to tasks_path do %>
+    <i class="fa fa-history"></i> Back to list
+  <% end %>
 </div>
