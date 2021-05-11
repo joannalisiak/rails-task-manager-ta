@@ -1,6 +1,8 @@
 <div class="container">
   <h1>My Tasks</h1>
-  <% @tasks.each do |task| %>
-    <p><%= task.completed %> <%= task.title %> </p>
-  <% end %>
+  <ul>
+    <% @tasks.each do |task| %>
+      <li><%= task.completed %> <%= task.title %> </li>
+    <% end %>
+  </ul>
 </div>
