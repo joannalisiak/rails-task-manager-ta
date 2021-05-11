@@ -4,7 +4,12 @@
     <% @tasks.each do |task| %>
       <li>
         <%= link_to task_path(task) do %>
-            <%= task.completed %> <%= task.title %> 
+          <% if task.completed %>
+            <i class="fa fa-check-square-o"></i>
+          <% else %>
+            <i class="fa fa-square-o"></i>
+          <% end %>
+          <%= task.title %> 
         <% end %>
         ·
         <%= link_to task_path(task), method: :delete, data: { confirm: "Delete #{task.title}?" } do %>
