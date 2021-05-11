@@ -1,0 +1,14 @@
+<div class="container">
+  <h1> <%= @task.title %> </h1>
+  <div class="background-gray">
+    <p> <%= @task.details %> </p>
+  </div>
+  <div class="border-gray">
+    <% if @task.completed %>
+      <p> <%= @task.completed %> This task is completed</p>
+    <% else %>
+      <p> <%= @task.completed %> This task is not completed yet</p>
+    <% end %>
+  </div>
+  <%= link_to "Back to list", tasks_path %>
+</div>

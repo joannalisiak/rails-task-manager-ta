@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+p {
+  margin: 0;
+}
+
 h1 {
   margin: 1em 0;
 }
@@ -13,4 +17,17 @@ ul {
 
 li {
   font-size: 18px;
+}
+
+.background-gray {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.border-gray {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px 20px 20px 0;
+  margin-bottom: 10px;
 }
