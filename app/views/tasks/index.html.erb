@@ -2,9 +2,15 @@
   <h1>My Tasks</h1>
   <ul class="border-gray">
     <% @tasks.each do |task| %>
-      <%= link_to task_path(task) do %>
-        <li><%= task.completed %> <%= task.title %> </li>
-      <% end %>
+      <li>
+        <%= link_to task_path(task) do %>
+            <%= task.completed %> <%= task.title %> 
+        <% end %>
+        ·
+        <%= link_to task_path(task), method: :delete, data: { confirm: "Delete #{task.title}?" } do %>
+          <i class="fa fa-trash-o" aria-hidden="true"></i>
+        <% end %>
+      </li>
     <% end %>
   </ul>
 
